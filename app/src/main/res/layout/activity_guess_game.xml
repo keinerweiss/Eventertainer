@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable name="game" type="keinerweiss.eventertainer.GuessGame.GuessGame" />
+        <variable name="question" type="keinerweiss.eventertainer.GuessGame.Question" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+
+        tools:context="keinerweiss.eventertainer.GuessGameActivity"
+        android:weightSum="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".1"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@{game.currentPlayer.name, default=The_Player}"
+            android:id="@+id/player"
+            android:gravity="left"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".6"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@{game.currentQuestion.question, default=Die_Frage}"
+            android:id="@+id/question"
+            android:gravity="center"
+            />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.03"
+            android:gravity="center|bottom">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:text="@{game.currentQuestion.first.text}"
+                android:id="@+id/answer1"
+                android:gravity="left|center"
+                android:onClick="answerSelected"
+                />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:text="@{game.currentQuestion.second.text}"
+                android:id="@+id/answer2"
+                android:gravity="left|center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.05"
+            android:gravity="center|bottom">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:text="@{game.currentQuestion.third.text}"
+                android:id="@+id/answer3"
+                android:gravity="left|center" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:text="@{game.currentQuestion.fourth.text}"
+                android:id="@+id/answer4"
+                android:gravity="left|center" />
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

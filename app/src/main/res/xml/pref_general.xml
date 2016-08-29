@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditTextPreference
+        android:title="Settings"
+        android:key="settings"
+        android:defaultValue="72762"
+        android:inputType="text"
+        android:singleLine="true"
+        />
+</PreferenceScreen>
