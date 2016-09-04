@@ -8,4 +8,10 @@
         android:layout_height="fill_parent"
         android:scaleType="fitCenter" />
 
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="Hallo Gallery"
+        android:textAppearance="?android:textAppearanceLarge"/>
+
 </RelativeLayout>
